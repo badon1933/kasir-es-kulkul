@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendor/bootstrap-icons/font/bootstrap-icons.min.css">
+    <title>Laporan</title>
+</head>
+
+<body>
+
+    <div style="height: 88vh;" class="container-fluid overflow-y-scroll pt-2">
+
+        <div class="row row-cols-1 g-2 mb-3">
+            <div class="col">
+                <div class="card card-body shadow-sm" id="cardStok">
+                    <span class="fs-3 fw-bold d-block">Stok Es Kul-Kul</span>
+                    <span class="fs-4">0pcs</span>
+                    <a href="daftar_menu.html" class="small text-decoration-none mt-1">Lihat lebih lengkap</a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card card-body shadow-sm" id="cardPendapatan">
+                    <span class="fs-3 fw-bold d-block">Pendapatan Hari ini</span>
+                    <span class="fs-4">IDR0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Riwayat Transaksi -->
+        <span class="fs-3 fw-bold">Riwayat Transaksi</span>
+        <hr />
+        <div class="mb-3 row align-items-center">
+            <label for="selectTanggal" class="col-2">Tanggal</label>
+            <div class="col">
+                <select class="form-select" aria-label="Default select example" id="selectTanggal"
+                    onchange="loadRiwayatTransaksi(this.value)">
+                    <!-- Data Tanggal -->
+
+                </select>
+            </div>
+        </div>
+        <table id="tableRiwayatTransaksi" class="table table-borderless table-striped">
+            <tbody>
+                <!-- Data Order Menu -->
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-dark" style="height: 12vh;">
+        <div class="container-fluid">
+            <ul class="navbar-nav flex-row justify-content-evenly" style="flex: 1 1 0px;">
+                <li class="nav-item">
+                    <a class="nav-link bg-primary p-2 rounded text-center py-0 text-white" aria-current="page"
+                        href="index.html">
+                        <i class="bi bi-journal-text d-block fs-5"></i>
+                        <span>Laporan</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center py-0 text-white" href="kasir.html">
+                        <i class="bi bi-cart3 d-block fs-5"></i>
+                        <span>Kasir</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-center py-0 text-white" href="daftar_menu.html">
+                        <i class="bi bi-card-list d-block fs-5"></i>
+                        <span style="font-size: 14px;">Daftar Menu</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/public/js/init.js"></script>
+    <script src="/public/js/index.js"></script>
+</body>
+
+</html>
